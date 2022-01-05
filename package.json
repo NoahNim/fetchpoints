@@ -1,0 +1,22 @@
+{
+  "name": "fetchpoints",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NoahNim/fetchpoints.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NoahNim/fetchpoints/issues"
+  },
+  "homepage": "https://github.com/NoahNim/fetchpoints#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
