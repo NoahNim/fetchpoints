@@ -9,6 +9,4 @@
 // Payer planning
 // Payer will be a class
 // Each instance of a class will have payer: string, points: integer, timestamp: date
-const express = require("express");
-const router = express.Router();
-const apiRouter = require("./api");
+
