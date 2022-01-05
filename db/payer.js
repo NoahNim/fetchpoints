@@ -4,4 +4,8 @@ class Payer {
         this.points = points;
         this.timestamp = timestamp;
     }
+
+    subtractPoints(num) {
+        return this.payer - num;
+    }
 }
