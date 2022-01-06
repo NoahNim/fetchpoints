@@ -1,10 +1,7 @@
 class User {
     constructor(payer, points) {
         this.payer = payer;
-        this.points = {
-            points: points,
-            
-        }
+        this.points = points
     }
 
     // this.points.reduce(function(a, b) { return a + b }, 0)
