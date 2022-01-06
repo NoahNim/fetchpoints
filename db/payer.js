@@ -6,6 +6,11 @@ class Payer {
     }
 
     subtractPoints(num) {
-        return this.payer - num;
+        return this.points - num;
     }
 }
+
+let david = new Payer('David', 5000, new Date());
+let corona = new Payer('Corona', 1000, new Date());
+
+console.log(david.subtractPoints(corona.points));
