@@ -1,8 +1,7 @@
 class Payer {
-    constructor(payer, points, timestamp) {
+    constructor(payer, points) {
         this.payer = payer;
         this.points = points;
-        this.timestamp = timestamp;
     }
 
     subtractPoints(num) {
@@ -10,7 +9,14 @@ class Payer {
     }
 }
 
-let david = new Payer('David', 5000, new Date());
-let corona = new Payer('Corona', 1000, new Date());
+let david = new Payer('David', 5000);
+let corona = new Payer('Corona', 1000);
 
-console.log(david.subtractPoints(corona.points));
+console.log(david)
+console.log(corona)
+
+class Transaction extends Payer {
+    constructor(timestamp) {
+        this.timestamp = timestamp;
+    }
+}
