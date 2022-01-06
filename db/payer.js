@@ -24,11 +24,15 @@ class Transaction extends User {
     }
     subtractPoints() {
         if (this.payer.points > 0 && this.payer.points - this.points >= 0) {
-            return this.payer.points = this.payer.points - this.points;
+            this.payer.points = this.payer.points - this.points;
+            // console.log({ payer: this.payer.payer, points: `-${this.points}` })
+            return { payer: this.payer.payer, points: `-${this.points}` }
         }
     }
     addPoints() {
-        return this.payer.points = this.payer.points + this.points
+        this.payer.points = this.payer.points + this.points
+        // console.log({ payer: this.payer.payer, points: `-${this.points}` })
+        return { payer: this.payer.payer, points: this.points }
     }
 }
 
