@@ -6,8 +6,8 @@ class User {
     }
 }
 
-// let david = new User('David', 5000);
-// let corona = new User('Corona', 1500);
+let david = new User('David', 5000);
+let corona = new User('Corona', 1500);
 
 // console.log(david)
 // console.log(corona)
@@ -41,4 +41,4 @@ class Transaction extends User {
 // console.log(david);
 // buyCorona.subtractPoints();
 // console.log(david);
-module.exports(User, Transaction);
+module.exports = User, Transaction;
