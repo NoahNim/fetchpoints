@@ -4,7 +4,7 @@ const asyncHandler = require("express-async-handler");
 const UserList = require("../db/users")
 
 router.get('/users', asyncHandler(async (req, res) => {
-    const users = UserList.findAll();
+    const users = await UserList;
 
     return res.json(users);
 }))
