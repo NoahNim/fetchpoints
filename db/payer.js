@@ -40,3 +40,4 @@ class Transaction extends User {
 // console.log(david);
 // buyCorona.subtractPoints();
 // console.log(david);
+module.exports(User, Transaction);
