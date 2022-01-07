@@ -1,5 +1,6 @@
 class User {
-    constructor(payer, points) {
+    constructor(id, payer, points) {
+        this.id = id;
         this.payer = payer;
         this.points = points;
     }

@@ -4,5 +4,5 @@ const User = require("./db/payer")
 const Transaction = require("./db/payer")
 
 router.get('/payer/name', {
-
+    
 })
