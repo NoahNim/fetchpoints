@@ -1,11 +1,12 @@
 const express = require("express");
 const router = express.Router();
 const asyncHandler = require("express-async-handler");
-const User = require("../db/payer")
-const Transaction = require("../db/payer.js")
+const UserList = require("../db/users")
 
 router.get('/users', asyncHandler(async (req, res) => {
-    const users = await User.findAll();
+    const users = UserList.findAll();
 
     return res.json(users);
 }))
+
+module.exports = router;

@@ -6,9 +6,6 @@ class User {
     }
 }
 
-let david = new User('David', 5000);
-let corona = new User('Corona', 1500);
-
 // console.log(david)
 // console.log(corona)
 // david.subtractPoints(david, corona);
