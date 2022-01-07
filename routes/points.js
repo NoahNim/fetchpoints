@@ -9,4 +9,12 @@ router.get('/users', asyncHandler(async (req, res) => {
     return res.json(users);
 }))
 
+router.get('/users/:id', asyncHandler(async (req, res) => {
+    const userId = req.params.id;
+
+    const user = await UserList[userId];
+
+    return res.json(user);
+}))
+
 module.exports = router;

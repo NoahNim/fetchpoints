@@ -6,11 +6,6 @@ class User {
     }
 }
 
-// console.log(david)
-// console.log(corona)
-// david.subtractPoints(david, corona);
-// console.log(david);
-
 class Transaction extends User {
     constructor(payer, points, timestamp) {
         super(payer, points);
@@ -30,12 +25,4 @@ class Transaction extends User {
     }
 }
 
-// let buyCorona = new Transaction(david, corona.points, new Date());
-// console.log(buyCorona);
-// buyCorona.addPoints();
-// console.log(david);
-// buyCorona.subtractPoints();
-// console.log(david);
-// buyCorona.subtractPoints();
-// console.log(david);
 module.exports = User, Transaction;
