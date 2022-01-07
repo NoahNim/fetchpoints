@@ -17,4 +17,8 @@ router.get('/users/:id', asyncHandler(async (req, res) => {
     return res.json(user);
 }))
 
+router.get('users/:userid/pay/company/:id', asyncHandler(async (req, res) => {
+    
+}))
+
 module.exports = router;
