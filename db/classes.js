@@ -1,10 +1,12 @@
 class User {
-    constructor(id, payer, points) {
-        this.id = id;
+    constructor(payer, points) {
         this.payer = payer;
         this.points = points;
     }
 }
+
+// let david = new User('David', 5000);
+// let corona = new User('Corona', 1000);
 
 class Transaction extends User {
     constructor(payer, points, timestamp) {
@@ -25,5 +27,13 @@ class Transaction extends User {
     }
 }
 
+// let buyCorona = new Transaction(david, corona.points, new Date());
+// console.log(buyCorona);
+// buyCorona.addPoints();
+// console.log(david);
+// buyCorona.subtractPoints();
+// console.log(david);
+// buyCorona.subtractPoints();
+// console.log(david);
 
 module.exports = { User, Transaction };
