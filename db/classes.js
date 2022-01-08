@@ -25,4 +25,5 @@ class Transaction extends User {
     }
 }
 
-module.exports = User, Transaction;
+
+module.exports = { User, Transaction };
