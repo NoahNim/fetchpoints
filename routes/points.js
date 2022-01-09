@@ -3,6 +3,7 @@ const router = express.Router();
 const asyncHandler = require("express-async-handler");
 const UserList = require("../db/users");
 const { Transaction } = require("../db/classes");
+const TransactionList = require("../db/users");
 
 router.get('/users', asyncHandler(async (req, res) => {
     const users = await UserList;
@@ -27,6 +28,7 @@ router.get('/users/:userid/pay/company/:id', asyncHandler(async (req, res) => {
 
     let payment = await new Transaction(user, company.points, new Date());
     let currentTransaction = payment.subtractPoints();
+    TransactionList.push(payment);
 
     console.log(currentTransaction);
 
@@ -42,6 +44,7 @@ router.get('/users/:userid/add/company/:id', asyncHandler(async (req, res) => {
 
     let addition = await new Transaction(user, company.points, new Date());
     let currentTransaction = addition.addPoints();
+    TransactionList.push(addition);
 
     console.log(currentTransaction);
 
