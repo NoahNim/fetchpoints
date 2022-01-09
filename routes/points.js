@@ -33,4 +33,20 @@ router.get('/users/:userid/pay/company/:id', asyncHandler(async (req, res) => {
     return res.json(currentTransaction);
 }))
 
+router.get('/users/:userid/add/company/:id', asyncHandler(async (req, res) => {
+    const userId = req.params.userid;
+    const companyId = req.params.id;
+
+    const user = await UserList[userId];
+    const company = await UserList[companyId];
+
+    let addition = await new Transaction(user, company.points, new Date());
+    let currentTransaction = addition.addPoints();
+
+    console.log(currentTransaction);
+
+    return res.json(currentTransaction);
+}))
+
+
 module.exports = router;
