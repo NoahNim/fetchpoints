@@ -12,6 +12,6 @@ let UserList = {
     8: new User("Apple", 7000)
 }
 
-let TransactionList = [];
+
 
 module.exports = UserList
